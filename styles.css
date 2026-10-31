@@ -250,7 +250,7 @@ a { color: inherit; }
 .stage--end { justify-content: center; gap: 40px; margin-top: 40px; }
 
 /* ---------- Level 02 · missions ---------- */
-.missions { display: grid; gap: 34px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.missions { display: grid; gap: 34px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
 .mission { transition: transform .15s steps(2); }
 .mission:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0 var(--mint), inset -10px 0 0 #ff8cc6; }
 .mission h3 { margin: 0 0 8px; font-family: var(--px); font-weight: 400; font-size: 16px; color: var(--pink-hot); }
@@ -279,6 +279,7 @@ a { color: inherit; }
 .quest__state { font-family: var(--px); font-size: 10px; color: var(--yellow); }
 .quest--active .quest__state { color: var(--mint); }
 .quest__when { color: #b9a8ff; }
+.quest__sub { margin: 16px 0 4px !important; font-family: var(--px); font-size: 11px; color: var(--yellow); }
 .quest__list { margin: 10px 0 0; padding: 0; list-style: none; }
 .quest__list li { position: relative; margin-bottom: 6px; padding-left: 22px; }
 .quest__list li::before { content: '◆'; position: absolute; left: 0; color: var(--pink); font-size: .8em; top: .15em; }
