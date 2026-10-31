@@ -7,10 +7,10 @@ Everything lives in `index.html`. Search for `EDIT:` comments:
 - **player.txt**: role, mission, status
 - **inventory.exe**: tech stack
 - **log.txt**: education
-- **skills.cfg**: skills (`value` = 0–10 bar fill)
+- **skills.cfg**: skills list
 - **Missions**: one `<article class="mission">` per project (set the Play/Code links)
-- **Quest log**: one `<li class="quest">` per job, internship or achievement
-- **Contact**: GitHub/LinkedIn URLs; drop a `resume.pdf` next to `index.html`
+- **Quest log**: high-score tiles + one `<li class="quest">` per role
+- **Contact**: email, GitHub, LinkedIn (to add a Resume button, drop `resume.pdf` next to `index.html` and link it)
 
 Pixel art is drawn from character grids in `script.js` (`SPRITES`). Colours are in `PALETTE`.
 
