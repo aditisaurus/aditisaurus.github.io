@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aditi Singh · 2026 Portfolio</title>
+  <meta name="description" content="Aditi Singh — developer portfolio. Press start.">
+  <meta name="theme-color" content="#0b0612">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 6' shape-rendering='crispEdges'%3E%3Cpath fill='%23ff4fa3' d='M1 0h2v1H1zM4 0h2v1H4zM0 1h7v2H0zM1 3h5v1H1zM2 4h3v1H2zM3 5h1v1H3z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ HUD / NAV ============ -->
+  <header class="hud">
+    <span class="hud__xp">XP: DEV LEVEL <span id="level">03</span></span>
+    <nav class="hud__nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#missions">Missions</a>
+      <a href="#quests">Quests</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="hud__player">
+      <span class="sprite" data-sprite="heart" data-scale="3" aria-hidden="true"></span>
+      <span class="hpbar" aria-hidden="true"><span id="hp"></span></span>
+      PLAYER 01
+      <span class="hud__coins" title="Coins collected — click the coins!"><span class="sprite" data-sprite="coin" data-scale="2" aria-hidden="true"></span> x<span id="coins">0</span></span>
+    </span>
+  </header>
+
+  <!-- ============ TITLE SCREEN ============ -->
+  <section class="hero" id="top">
+    <span class="sprite cloud c1" data-sprite="cloud" data-scale="5" aria-hidden="true"></span>
+    <span class="sprite cloud c2" data-sprite="cloud" data-scale="4" aria-hidden="true"></span>
+    <span class="sprite cloud c3" data-sprite="cloud" data-scale="6" aria-hidden="true"></span>
+    <span class="sprite star s1" data-sprite="star" data-scale="3" aria-hidden="true"></span>
+    <span class="sprite star s2" data-sprite="star" data-scale="4" aria-hidden="true"></span>
+    <span class="sprite star s3" data-sprite="star" data-scale="3" aria-hidden="true"></span>
+    <span class="sprite star s4" data-sprite="star" data-scale="4" aria-hidden="true"></span>
+
+    <div class="screen">
+      <p class="screen__year">2026</p>
+      <h1 class="screen__title">PORTFOLIO</h1>
+      <p class="screen__sub">Aditi Singh · Software Developer</p>
+      <a class="btn-start" href="#about">START</a>
+      <p class="screen__hint blink">▶ PRESS START TO PLAY</p>
+    </div>
+
+    <div class="scene" aria-hidden="true">
+      <div class="lamp"><span></span></div>
+      <span class="sprite player bob" data-sprite="girl" data-scale="7"></span>
+      <span class="sprite cat" data-sprite="cat" data-scale="6"></span>
+      <span class="sprite tree" data-sprite="tree" data-scale="11"></span>
+    </div>
+    <div class="ground"></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee__track" data-text="About Me"></div></div>
+
+  <!-- ============ LEVEL 01 · ABOUT ============ -->
+  <section class="level" id="about">
+    <span class="sprite cloud c4" data-sprite="cloud" data-scale="6" aria-hidden="true"></span>
+    <span class="sprite cloud c5" data-sprite="cloud" data-scale="5" aria-hidden="true"></span>
+
+    <div class="level__head">
+      <h2 class="level__num">Level<br>01</h2>
+      <p class="level__tag">Meet the player</p>
+      <p class="level__name">Aditi<br>Singh</p>
+    </div>
+
+    <div class="about-grid">
+      <!-- Handheld console -->
+      <div class="console" aria-hidden="true">
+        <div class="console__top">
+          <div class="console__cam"></div>
+          <div class="console__screen">
+            <span class="sprite" data-sprite="girl" data-scale="6"></span>
+            <span class="sprite twinkle st1" data-sprite="star" data-scale="3"></span>
+            <span class="sprite twinkle st2" data-sprite="star" data-scale="3"></span>
+          </div>
+        </div>
+        <div class="console__hinge"></div>
+        <div class="console__bottom">
+          <div class="dpad"><i></i><i></i></div>
+          <div class="console__touch"></div>
+          <div class="abxy"><i>A</i><i>B</i><i>X</i><i>Y</i></div>
+        </div>
+      </div>
+
+      <!-- EDIT: player card -->
+      <article class="win win--hello">
+        <div class="win__bar"><span>player.txt</span><span class="win__btns"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3 class="win__label">Hello !!</h3>
+          <p><b>Player:</b> Aditi Singh</p>
+          <p><b>Class:</b> Software Developer</p>
+          <p><b>Mission:</b> Build fast, thoughtful, delightful software that people actually enjoy using.</p>
+          <p><b>Status:</b> Open to opportunities — ready to explore, build, and win.</p>
+          <p>Let's start the game!</p>
+        </div>
+      </article>
+
+      <!-- EDIT: tech stack -->
+      <article class="win win--weapons">
+        <div class="win__bar"><span>inventory.exe</span><span class="win__btns"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3 class="win__label">Weapons Mastery</h3>
+          <ul class="inventory">
+            <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li>
+            <li>Python</li><li>SQL</li><li>Git</li><li>Docker</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- EDIT: education -->
+      <article class="win win--training">
+        <div class="win__bar"><span>log.txt</span><span class="win__btns"><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3 class="win__label">Training Log</h3>
+          <p><b>B.Tech, Computer Science</b></p>
+          <p>Your University, City</p>
+          <p>20XX – 20XX</p>
+        </div>
+      </article>
+
+      <!-- EDIT: skills -->
+      <article class="win win--skills">
+        <div class="win__bar"><span>skills.cfg</span><span class="win__btns"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3 class="win__label">Skills Mastery</h3>
+          <ul class="skills">
+            <li><span>Frontend</span><meter min="0" max="10" value="9"></meter></li>
+            <li><span>Backend / APIs</span><meter min="0" max="10" value="8"></meter></li>
+            <li><span>Databases</span><meter min="0" max="10" value="7"></meter></li>
+            <li><span>System Design</span><meter min="0" max="10" value="6"></meter></li>
+            <li><span>Testing</span><meter min="0" max="10" value="7"></meter></li>
+            <li><span>Cloud / DevOps</span><meter min="0" max="10" value="6"></meter></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <span class="sprite coin" data-sprite="coin" data-scale="4"></span>
+      <span class="sprite coin" data-sprite="coin" data-scale="4"></span>
+      <span class="sprite flower" data-sprite="flower" data-scale="5"></span>
+      <span class="sprite coin" data-sprite="coin" data-scale="4"></span>
+      <span class="sprite pipe" data-sprite="pipe" data-scale="5"></span>
+      <span class="sprite coin" data-sprite="coin" data-scale="4"></span>
+      <span class="sprite flower" data-sprite="flower" data-scale="5"></span>
+      <span class="sprite coin" data-sprite="coin" data-scale="4"></span>
+      <span class="sprite door" data-sprite="door" data-scale="5"></span>
+    </div>
+    <div class="ground"></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee__track" data-text="Missions"></div></div>
+
+  <!-- ============ LEVEL 02 · PROJECTS ============ -->
+  <section class="level" id="missions">
+    <div class="level__head level__head--row">
+      <h2 class="level__num">Level 02</h2>
+      <p class="level__tag">Missions completed</p>
+    </div>
+
+    <!-- EDIT: duplicate a <article class="mission"> per project -->
+    <div class="missions">
+      <article class="win mission">
+        <div class="win__bar"><span>mission_01</span><span class="win__btns"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <p class="mission__diff" title="Difficulty">★★★☆☆</p>
+          <h3>Project One</h3>
+          <p>One or two lines on what you built, the problem it solves, and the impact (users, speed, scale).</p>
+          <ul class="tags"><li>React</li><li>Node.js</li><li>Postgres</li></ul>
+          <div class="mission__links">
+            <a class="pbtn" href="#">▶ Play</a>
+            <a class="pbtn pbtn--alt" href="#">&lt;/&gt; Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="win mission">
+        <div class="win__bar"><span>mission_02</span><span class="win__btns"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <p class="mission__diff" title="Difficulty">★★★★☆</p>
+          <h3>Project Two</h3>
+          <p>One or two lines on what you built, the problem it solves, and the impact (users, speed, scale).</p>
+          <ul class="tags"><li>Python</li><li>FastAPI</li><li>Docker</li></ul>
+          <div class="mission__links">
+            <a class="pbtn" href="#">▶ Play</a>
+            <a class="pbtn pbtn--alt" href="#">&lt;/&gt; Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="win mission">
+        <div class="win__bar"><span>mission_03</span><span class="win__btns"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <p class="mission__diff" title="Difficulty">★★★★★</p>
+          <h3>Project Three</h3>
+          <p>One or two lines on what you built, the problem it solves, and the impact (users, speed, scale).</p>
+          <ul class="tags"><li>TypeScript</li><li>Next.js</li><li>AWS</li></ul>
+          <div class="mission__links">
+            <a class="pbtn" href="#">▶ Play</a>
+            <a class="pbtn pbtn--alt" href="#">&lt;/&gt; Code</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee__track" data-text="Quest Log"></div></div>
+
+  <!-- ============ LEVEL 03 · EXPERIENCE ============ -->
+  <section class="level" id="quests">
+    <div class="level__head level__head--row">
+      <h2 class="level__num">Level 03</h2>
+      <p class="level__tag">Quest log</p>
+    </div>
+
+    <!-- EDIT: one <li> per role / internship / achievement -->
+    <ol class="quests">
+      <li class="quest quest--active">
+        <span class="quest__state">IN PROGRESS</span>
+        <h3>Software Developer · Company</h3>
+        <p class="quest__when">20XX – Present</p>
+        <p>What you own, what you shipped, a number that shows impact.</p>
+      </li>
+      <li class="quest">
+        <span class="quest__state">CLEARED ✓</span>
+        <h3>Software Engineering Intern · Company</h3>
+        <p class="quest__when">20XX</p>
+        <p>What you built and what you learned.</p>
+      </li>
+      <li class="quest">
+        <span class="quest__state">ACHIEVEMENT ★</span>
+        <h3>Hackathon / Certification / Open Source</h3>
+        <p class="quest__when">20XX</p>
+        <p>A win worth bragging about.</p>
+      </li>
+    </ol>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee__track" data-text="Save Point"></div></div>
+
+  <!-- ============ SAVE POINT · CONTACT ============ -->
+  <section class="level contact" id="contact">
+    <span class="sprite cloud c6" data-sprite="cloud" data-scale="5" aria-hidden="true"></span>
+    <h2 class="contact__title">CONTINUE?</h2>
+    <p class="contact__count" id="countdown" aria-hidden="true">9</p>
+    <p class="contact__text">Want to team up for the next level? Send a message — I reply faster than a speedrun.</p>
+    <!-- EDIT: your links -->
+    <div class="contact__links">
+      <a class="pbtn" href="mailto:aditisinghdeveloper@gmail.com">✉ Email</a>
+      <a class="pbtn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a class="pbtn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="pbtn pbtn--alt" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+    <p class="contact__mail">aditisinghdeveloper@gmail.com</p>
+    <div class="stage stage--end" aria-hidden="true">
+      <span class="sprite player" data-sprite="girl" data-scale="5"></span>
+      <span class="sprite cat" data-sprite="cat" data-scale="4"></span>
+      <span class="sprite flag" data-sprite="flag" data-scale="5"></span>
+    </div>
+    <div class="ground"></div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Aditi Singh · Built with ♥ and pixels</p>
+    <p class="footer__hint">psst… try ↑ ↑ ↓ ↓ ← → ← → B A</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
