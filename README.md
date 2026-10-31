@@ -1,4 +1,4 @@
-# Aditi Singh · 2026 Portfolio
+# Aditi Singh · Portfolio
 
 Pink pixel-game themed portfolio. Plain HTML/CSS/JS, so there's no build step and no dependencies.
 

@@ -73,10 +73,6 @@ a { color: inherit; }
   box-shadow: 0 0 0 4px #000, 0 0 30px #3df5a055;
   text-align: center;
 }
-.screen__year {
-  margin: 0; font-family: var(--px); font-size: clamp(28px, 6vw, 56px);
-  color: #e8ff9a; text-shadow: 4px 4px 0 var(--mint-dark);
-}
 .screen__title {
   margin: 16px 0 10px; font-family: var(--px); font-weight: 400;
   font-size: clamp(32px, 8.5vw, 88px); letter-spacing: 2px;
