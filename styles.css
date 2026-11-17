@@ -235,6 +235,9 @@ a { color: inherit; }
 .skills li { margin-bottom: 4px; padding-left: 1em; text-indent: -1em; }
 .skills li::before { content: '▸ '; color: var(--pink-hot); }
 .inventory__tools { margin: 14px 0 0 !important; font-size: 19px; }
+.win__cert { margin-top: 14px !important; }
+.win__body a { color: var(--peri); }
+.win__body a:hover, .win__body a:focus-visible { color: var(--pink-hot); }
 .win__note { margin-top: 12px !important; padding-top: 8px; border-top: 2px dashed var(--pink); color: var(--peri); }
 
 /* ---------- Stage decor (coins, pipe, door) ---------- */
