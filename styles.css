@@ -52,7 +52,7 @@ a { color: inherit; }
 .hud__nav a:hover::before { content: '▶ '; }
 .hud__music {
   font: inherit; letter-spacing: inherit; cursor: pointer;
-  padding: 6px 8px; color: var(--pink-soft); background: none;
+  margin-left: 10px; padding: 4px 6px; color: var(--pink-soft); background: none;
   border: 2px solid currentColor;
 }
 .hud__music:hover, .hud__music:focus-visible { color: var(--mint); }

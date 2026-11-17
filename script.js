@@ -201,6 +201,7 @@ document.querySelectorAll('.coin').forEach((coin) => {
     if (coin.classList.contains('got')) return;
     coin.classList.add('got');
     coinsEl.textContent = ++coins;
+    coinSound();
   });
 });
 
@@ -266,6 +267,14 @@ function playMusic(play) {
   audio.resume();
   nextAt = audio.currentTime + 0.05;
   musicTimer = setInterval(scheduleMusic, 25);
+}
+
+// Two-note blip when a coin is collected; follows the same ♪ toggle as the music.
+function coinSound() {
+  if (!musicOn) return;
+  const t = audio.currentTime;
+  tone(81, t, 0.08, 'square', 0.3);
+  tone(88, t + 0.08, 0.35, 'square', 0.3);
 }
 
 musicBtn.addEventListener('click', () => {
