@@ -50,6 +50,13 @@ a { color: inherit; }
 .hud__nav a { text-decoration: none; color: var(--pink-soft); }
 .hud__nav a:hover, .hud__nav a:focus-visible { color: var(--mint); }
 .hud__nav a:hover::before { content: '▶ '; }
+.hud__music {
+  font: inherit; letter-spacing: inherit; cursor: pointer;
+  padding: 6px 8px; color: var(--pink-soft); background: none;
+  border: 2px solid currentColor;
+}
+.hud__music:hover, .hud__music:focus-visible { color: var(--mint); }
+.hud__music[aria-pressed="true"] { color: var(--mint); }
 .hud__player { display: flex; align-items: center; gap: 8px; color: var(--pink); }
 .hud__coins { display: flex; align-items: center; gap: 6px; color: var(--yellow); margin-left: 10px; }
 .hpbar { width: 90px; height: 10px; background: #fff; box-shadow: 0 0 0 2px var(--ink); }
