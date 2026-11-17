@@ -259,13 +259,21 @@ function playMusic(play) {
   clearInterval(musicTimer);
   if (!play) { audio?.suspend(); return; }
   if (!audio) {
-    audio = new AudioContext();
+    // iOS: play like a music app, so the ringer's silent switch doesn't mute it
+    if (navigator.audioSession) navigator.audioSession.type = 'playback';
+    audio = new (window.AudioContext || window.webkitAudioContext)();
     master = audio.createGain();
     master.gain.value = 0.25;
     master.connect(audio.destination);
+    // Mobile browsers only unlock audio for sound started inside the tap itself
+    const unlock = audio.createBufferSource();
+    unlock.buffer = audio.createBuffer(1, 1, 22050);
+    unlock.connect(audio.destination);
+    unlock.start(0);
   }
   audio.resume();
   nextAt = audio.currentTime + 0.05;
+  scheduleMusic();
   musicTimer = setInterval(scheduleMusic, 25);
 }
 
