@@ -280,7 +280,6 @@ function coinSound() {
 musicBtn.addEventListener('click', () => {
   musicOn = !musicOn;
   musicBtn.setAttribute('aria-pressed', musicOn);
-  musicBtn.textContent = musicOn ? '♪ ON' : '♪ OFF';
   playMusic(musicOn);
 });
 // Background tabs throttle timers, which would garble the loop, so pause while hidden.

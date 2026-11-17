@@ -57,6 +57,11 @@ a { color: inherit; }
 }
 .hud__music:hover, .hud__music:focus-visible { color: var(--mint); }
 .hud__music[aria-pressed="true"] { color: var(--mint); }
+/* Both labels share one grid cell so the button keeps the wider label's width */
+.hud__music { display: inline-grid; justify-items: center; }
+.hud__music span { grid-area: 1 / 1; }
+.hud__music[aria-pressed="false"] span:first-child,
+.hud__music[aria-pressed="true"] span:last-child { visibility: hidden; }
 .hud__player { display: flex; align-items: center; gap: 8px; color: var(--pink); }
 .hud__coins { display: flex; align-items: center; gap: 6px; color: var(--yellow); margin-left: 10px; }
 .hpbar { width: 90px; height: 10px; background: #fff; box-shadow: 0 0 0 2px var(--ink); }
