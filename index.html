@@ -311,6 +311,63 @@
     </ol>
   </section>
 
+  <div class="marquee" aria-hidden="true"><div class="marquee__track" data-text="Now Reading"></div></div>
+
+  <!-- ============ BONUS STAGE · NOW READING ============ -->
+  <section class="level" id="reading">
+    <div class="level__head level__head--row">
+      <h2 class="level__num">Bonus</h2>
+      <p class="level__tag">Currently reading</p>
+    </div>
+
+    <!-- EDIT: swap the cover, spine and card text when you start a new book -->
+    <div class="reading">
+      <div class="book-stage">
+        <span class="sprite twinkle rs1" data-sprite="star" data-scale="4" aria-hidden="true"></span>
+        <span class="sprite twinkle rs2" data-sprite="star" data-scale="3" aria-hidden="true"></span>
+        <span class="sprite twinkle rs3" data-sprite="star" data-scale="3" aria-hidden="true"></span>
+        <span class="sprite twinkle rs4" data-sprite="heart" data-scale="3" aria-hidden="true"></span>
+        <button class="book" id="book" type="button" aria-label="Turn the book: Algorithms to Live By">
+          <span class="book__inner" aria-hidden="true">
+            <span class="book__cover">
+              <span class="book__badge">★ NOW READING ★</span>
+              <svg class="book__art" viewBox="0 0 8 5" shape-rendering="crispEdges">
+                <path fill="#ffffff14" d="M0 0h8v5H0z"/>
+                <path fill="#ff4fa355" d="M1 0h1v1H1zM3 1h1v1H3zM6 0h1v1H6zM0 3h1v1H0zM4 3h1v1H4zM6 3h1v1H6zM2 4h1v1H2z"/>
+                <path fill="#3df5a0" d="M0 1h3v1H0zM2 2h3v1H2zM4 1h2v1H4zM5 2h1v2H5zM5 4h3v1H5z"/>
+                <path fill="#ffd23f" d="M0 1h1v1H0zM7 4h1v1H7z"/>
+              </svg>
+              <span class="book__title">Algorithms<br>to Live By</span>
+              <span class="book__sub">The Computer Science of Human Decisions</span>
+              <span class="book__author">Brian Christian &amp; Tom Griffiths</span>
+            </span>
+            <span class="book__spine"><span>ALGORITHMS TO LIVE BY</span></span>
+            <span class="book__pages"></span>
+            <span class="book__back"></span>
+          </span>
+        </button>
+      </div>
+
+      <article class="win win--reading">
+        <div class="win__bar"><span>now_reading.sav</span><span class="win__btns"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <p class="reading__rarity">★ LEGENDARY TOME ★</p>
+          <h3>Algorithms to Live By</h3>
+          <p class="reading__by">by Brian Christian &amp; Tom Griffiths</p>
+          <p><b>Item effect:</b> uses ideas from computer science to make everyday decisions better: when to stop searching, what to keep, and how to plan your time.</p>
+          <p class="reading__sub">Skills unlocking</p>
+          <ul class="tags">
+            <li>Optimal Stopping</li><li>Explore vs Exploit</li><li>Sorting</li><li>Caching</li>
+            <li>Scheduling</li><li>Bayes' Rule</li><li>Overfitting</li><li>Game Theory</li>
+          </ul>
+          <p class="reading__sub">Quest status</p>
+          <div class="readbar" aria-hidden="true"><span></span></div>
+          <p class="reading__status">READING<span class="blink">…</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <div class="marquee" aria-hidden="true"><div class="marquee__track" data-text="Save Point"></div></div>
 
   <!-- ============ SAVE POINT · CONTACT ============ -->

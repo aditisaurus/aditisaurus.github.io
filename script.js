@@ -285,6 +285,13 @@ function coinSound() {
   tone(88, t + 0.08, 0.35, 'square', 0.3);
 }
 
+// Rising "item get" arpeggio for the book; also follows the ♪ toggle.
+function itemSound() {
+  if (!musicOn) return;
+  const t = audio.currentTime;
+  [72, 76, 79, 84].forEach((n, i) => tone(n, t + i * 0.07, i === 3 ? 0.4 : 0.1, 'square', 0.25));
+}
+
 musicBtn.addEventListener('click', () => {
   musicOn = !musicOn;
   musicBtn.setAttribute('aria-pressed', musicOn);
@@ -293,6 +300,12 @@ musicBtn.addEventListener('click', () => {
 // Background tabs throttle timers, which would garble the loop, so pause while hidden.
 document.addEventListener('visibilitychange', () => {
   if (musicOn) playMusic(!document.hidden);
+});
+
+/* ---------- Bonus stage: tap the book to turn it (phones have no hover) ---------- */
+const book = document.getElementById('book');
+book.addEventListener('click', () => {
+  if (book.classList.toggle('is-turned')) itemSound();
 });
 
 /* ---------- Easter egg: Konami code rains hearts ---------- */
